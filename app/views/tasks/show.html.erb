@@ -1,0 +1,11 @@
+<h1>Tasks info</h1>
+
+<p><strong>Title:</strong> <%= @task.title %></p>
+<p><strong>Details:</strong> <%= @task.details %></p>
+<p><strong>completed:</strong> <%= @task.completed %></p>
+
+
+<%= link_to 'edit', edit_task_path(@task)%>
+<%= link_to 'delete', task_path(@task), data: {turbo_method: :delete, turbo_confirm: 'De verdade?'} %>
+
+<p><%= link_to 'See all tasks', tasks_path %></p>
